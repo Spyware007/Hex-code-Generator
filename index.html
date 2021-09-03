@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Document</title>
+</head>
+<body>
+    <h2><span> Hello!</span> <br>This is a HEX color code generator,<br>with respective color on background.</h2>
+    <h1>
+        <button id="genNew"><p>Generate New Random Color</p></button>
+        <span id="color"></span>
+      </h1>
+      <script>
+            const setBg = () => {
+            const randomColor = Math.floor(Math.random()*16777215).toString(16);
+            document.body.style.backgroundColor = "#" + randomColor;
+            color.innerHTML = "#" + randomColor;
+            }
+
+            genNew.addEventListener("click", setBg);
+            setBg();
+      </script>
+</body>
+</html>
